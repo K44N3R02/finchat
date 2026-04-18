@@ -56,7 +56,7 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
   // Find all JSON blocks that contain chartData but are NOT inside backticks
   // We use a simpler regex that just looks for { ... chartData ... }
   const rawJsonRegex = /(?<!`)\s*(\{\s*[\s\S]*?['"]chart\s*Data['"][\s\S]*?\})\s*(?!`)/gi;
-  processedContent = processedContent.replace(rawJsonRegex, (match, p1) => {
+  processedContent = processedContent.replace(rawJsonRegex, (_match, p1) => {
     return `\n\n\`\`\`json\n${p1.trim()}\n\`\`\`\n\n`;
   });
 
