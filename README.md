@@ -14,7 +14,24 @@ Try at [finchat-iota.vercel.app](https://finchat-iota.vercel.app/).
 
 ---
 
-## Quick Start
+## Quick Start (with Docker)
+
+This project is containerized with Docker. 
+
+1. Create the required `.env` files:
+   - Copy `backend/.env.example` to `backend/.env` and add your `OPENAI_API_KEY`.
+   - Copy `frontend/.env.example` to `frontend/.env`.
+
+2. Build and start the containers using Docker Compose:
+   ```bash
+   docker compose up --build
+   ```
+
+The frontend will be available at `http://localhost:5173` and the backend API at `http://localhost:8000`.
+
+---
+
+## Manual Setup
 
 ### 1. Prerequisites
 - Python 3.11+
